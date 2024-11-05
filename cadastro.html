@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style_cadastro.css" />
+    <!-- Link para o arquivo CSS -->
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">Unifeso-Agenda Facil</div>
+      <a href="pagina_principal.html" class="main-btn">Principal</a>
+    </div>
+
+    <div class="container">
+      <h2>Cadastro</h2>
+      <form action="cadastro_process.php" method="POST">
+        <div class="form-group">
+          <label for="fullname">Nome Completo</label>
+          <input type="text" id="fullname" name="fullname" required />
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="telefone">Telefone ou Celular</label>
+          <input type="tel" id="telefone" name="telefone" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Senha</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <button type="submit" class="btn-rounded">Cadastrar</button>
+      </form>
+    </div>
+  </body>
+</html>
