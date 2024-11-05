@@ -22,12 +22,22 @@
             onsubmit="login_user(event)"
           >
             <div class="form-group">
-              <label for="email">E-mail</label>
-              <input type="email" id="email" name="email" required />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="E-mail"
+                required
+              />
             </div>
             <div class="form-group">
-              <label for="password">Senha</label>
-              <input type="password" id="password" name="password" required />
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Senha"
+                required
+              />
             </div>
             <button type="submit" class="btn-rounded">Entrar</button>
           </form>
@@ -35,7 +45,7 @@
             onclick="window.location.href='cadastro.html'"
             class="btn-rounded"
           >
-            Cadastre-se
+            Crie sua conta
           </button>
         </div>
         <div class="info-section">
@@ -47,7 +57,7 @@
               de sete cabeças!
             </p>
             <p>
-              Faça login com seu usuário e senha para que possamos iniciar seu
+              Faça login com seu e-mail e senha para que possamos iniciar seu
               atendimento.
             </p>
           </div>
@@ -63,7 +73,7 @@
 
         if (email === "jhonathanpegoral123@gmail.com" && senha === "123") {
           alert("Login efetuado");
-          location.href = "cadastro.html"; // Redirecionar para a página de agendamento
+          location.href = "agendamento.html"; // Redirecionar para a página de agendamento
         } else {
           alert("Email ou senha inválidos.");
         }

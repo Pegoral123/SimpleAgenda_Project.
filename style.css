@@ -76,22 +76,19 @@ body {
   color: #333;
 }
 
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-group label {
-  font-size: 14px;
-  color: #555;
-}
-
 .form-group input {
   width: 100%;
-  padding: 10px;
+  padding: 15px;
   font-size: 16px;
   border: 1px solid #ddd;
   border-radius: 5px;
   margin-top: 5px;
+}
+
+/* Para placeholders */
+.form-group input::placeholder {
+  color: #aaa; /* Cor do texto do placeholder */
+  opacity: 1; /* Para garantir que o placeholder tenha 100% de opacidade */
 }
 
 .btn-rounded {
@@ -139,4 +136,27 @@ body {
 .info-section p {
   font-size: 16px;
   line-height: 1.5;
+}
+/* Adicione isso ao seu arquivo CSS */
+.btn-rounded {
+  background-color: #90ee90; /* Verde claro */
+  color: #fff;
+  border: none;
+  border-radius: 20px; /* Bordas arredondadas */
+  padding: 10px 20px; /* Espaçamento interno pequeno */
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  margin-top: 10px; /* Margem entre os botões */
+  width: 100%; /* Ajuste a largura para preencher o espaço */
+}
+
+.btn-rounded:hover {
+  background-color: #76c776; /* Cor mais escura ao passar o mouse */
+}
+
+/* Estilo específico para o botão de criar conta */
+.btn-rounded:last-of-type {
+  background-color: #4caf50; /* Verde diferente para destacar */
 }

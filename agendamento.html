@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de Agendamento</title>
+    <link rel="stylesheet" href="style_agendamento.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">Unifeso-Agenda Facil</div>
+      <a href="pagina_principal.html" class="main-btn">Principal</a>
+    </div>
+    <header>
+      <h1>Agendamento de Consultas para Imposto de Renda</h1>
+      <div class="instruction">
+        <img src="img/instrucao.jpg" alt="Instrução" />
+        <p>
+          Escolha um contador e agende sua consulta para esclarecer suas dúvidas
+          sobre o imposto de renda. As consultas são limitadas e os horários são
+          por ordem de chegada.
+        </p>
+      </div>
+    </header>
+    <div class="container">
+      <h2 style="text-align: center">Consultas Disponíveis</h2>
+      <p style="padding: 10px">
+        Escolha um contador e agende sua consulta para esclarecer suas dúvidas
+        sobre o imposto de renda. As consultas são limitadas e os horários são
+        por ordem de chegada.
+      </p>
+      <div class="counters">
+        <div class="counter" id="counter1">
+          <h3>Contador 1</h3>
+          <p>Nome: João Silva</p>
+          <p>Anos de Experiência: 5</p>
+          <p>Data Disponível: 10/11/2024</p>
+          <p>Taxa: R$ 150,00</p>
+          <button
+            class="select-btn"
+            onclick="selectCounter('counter1', 'João Silva')"
+          >
+            Selecionar
+          </button>
+        </div>
+        <div class="counter" id="counter2">
+          <h3>Contador 2</h3>
+          <p>Nome: Maria Oliveira</p>
+          <p>Anos de Experiência: 8</p>
+          <p>Data Disponível: 12/11/2024</p>
+          <p>Taxa: R$ 200,00</p>
+          <button
+            class="select-btn"
+            onclick="selectCounter('counter2', 'Maria Oliveira')"
+          >
+            Selecionar
+          </button>
+        </div>
+        <div class="counter" id="counter3">
+          <h3>Contador 3</h3>
+          <p>Nome: Carlos Pereira</p>
+          <p>Anos de Experiência: 3</p>
+          <p>Data Disponível: 15/11/2024</p>
+          <p>Taxa: R$ 120,00</p>
+          <button
+            class="select-btn"
+            onclick="selectCounter('counter3', 'Carlos Pereira')"
+          >
+            Selecionar
+          </button>
+        </div>
+        <div class="counter" id="counter4">
+          <h3>Contador 4</h3>
+          <p>Nome: Ana Costa</p>
+          <p>Anos de Experiência: 6</p>
+          <p>Data Disponível: 17/11/2024</p>
+          <p>Taxa: R$ 180,00</p>
+          <button
+            class="select-btn"
+            onclick="selectCounter('counter4', 'Ana Costa')"
+          >
+            Selecionar
+          </button>
+        </div>
+      </div>
+
+      <h2 class="centro">Consultas Marcadas</h2>
+      <div id="scheduled-consultations" class="scheduled-consultations"></div>
+    </div>
+
+    <div id="overlay" class="overlay" style="display: none">
+      <div class="confirmation-message">
+        <p>
+          Você selecionou o contador <span id="selected-counter-name"></span>.
+          Deseja confirmar?
+        </p>
+        <button id="confirm-btn">Confirmar</button>
+        <button id="cancel-btn">Cancelar</button>
+      </div>
+    </div>
+
+    <script>
+      let selectedCounterId = null;
+      let selectedCounterName = "";
+
+      function selectCounter(counterId, counterName) {
+        selectedCounterId = counterId;
+        selectedCounterName = counterName;
+        document.getElementById("selected-counter-name").innerText =
+          counterName;
+        document.getElementById("overlay").style.display = "flex";
+      }
+
+      document
+        .getElementById("confirm-btn")
+        .addEventListener("click", function () {
+          // Adiciona a consulta marcada
+          const consultationDiv = document.createElement("div");
+          consultationDiv.classList.add("marked-consultation");
+          consultationDiv.innerHTML = `
+                <h3>${selectedCounterName}</h3>
+                <p>Consulta marcada com sucesso!</p>
+                <button class="delete-btn" onclick="deleteConsultation(this)">Excluir</button>
+            `;
+          document
+            .getElementById("scheduled-consultations")
+            .appendChild(consultationDiv);
+
+          // Remove o contador da lista
+          const counterElement = document.getElementById(selectedCounterId);
+          counterElement.parentNode.removeChild(counterElement);
+
+          // Fecha a sobreposição
+          document.getElementById("overlay").style.display = "none";
+        });
+
+      document
+        .getElementById("cancel-btn")
+        .addEventListener("click", function () {
+          document.getElementById("overlay").style.display = "none";
+        });
+
+      function deleteConsultation(button) {
+        const consultationDiv = button.parentNode;
+        consultationDiv.parentNode.removeChild(consultationDiv);
+        alert("Consulta excluída com sucesso!");
+      }
+    </script>
+  </body>
+</html>
