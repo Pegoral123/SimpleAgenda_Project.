@@ -1,3 +1,4 @@
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -6,19 +7,24 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
 .navbar {
   position: absolute;
   top: 0;
   width: 100%;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 15px 20px;
   background-color: #333;
   color: #fff;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 .navbar .logo {
@@ -38,93 +44,132 @@ body {
   font-size: 14px;
 }
 
-.container {
-  width: 80%;
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.user-info span {
+  display: block;
+  text-align: right;
+  font-size: 0.9rem;
+}
+
+.main-container {
   max-width: 900px;
-  margin: 80px auto 0;
+  margin: 30px auto;
   padding: 20px;
-  background-color: #fff;
+  background: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 140px; /* Espaço para o navbar */
 }
 
-header {
-  display: flex;
-  align-items: center;
+.form-container h1 {
+  margin-bottom: 10px;
+  color: #0a0a0a;
+}
+
+.form-container p {
   margin-bottom: 20px;
+  font-size: 0.95rem;
 }
 
-header h1 {
-  flex-grow: 1;
-  font-size: 24px;
-}
-
-.instruction {
-  display: flex;
-  align-items: center;
-}
-
-.instruction img {
-  width: 100px;
-  height: auto;
-  margin-right: 15px;
-}
-
-.counters {
-  margin-top: 20px;
-}
-
-.counter,
-.marked-consultation {
-  background-color: #f7f7f7;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 15px;
+.form-group {
   margin-bottom: 15px;
 }
 
-.counter h3 {
-  margin-bottom: 10px;
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
-.select-btn,
-.delete-btn {
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 15px;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.select-btn:hover,
-.delete-btn:hover {
-  background-color: #45a049;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
+.form-group select,
+.form-group input {
   width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.alert {
+  background-color: #ffeb3b;
+  padding: 10px;
+  margin: 15px 0;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.links a {
+  font-size: 0.9rem;
+  color: #080707;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.form-actions {
+  margin-top: 20px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
 }
 
-.confirmation-message {
-  background: white;
-  padding: 20px;
-  border-radius: 5px;
+.btn-rounded {
+  background-color: #90ee90;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
   text-align: center;
+  transition: background-color 0.3s ease;
 }
 
-.confirmation-message button {
-  margin: 10px;
+.btn-rounded:hover {
+  background-color: #76c776;
 }
-.centro {
-  text-align: center;
+
+.consulta-tabela {
+  margin-top: 30px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+table th,
+table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2.5rem; /* Tamanho do texto */
+  font-weight: bold; /* Negrito */
+  text-align: center; /* Centraliza o texto */
+  color: #050404; /* Cor (tom de vermelho) */
+  margin-bottom: 20px; /* Espaço abaixo do título */
+  text-transform: uppercase; /* Texto em letras maiúsculas */
+  letter-spacing: 2px; /* Espaçamento entre as letras */
+  border-bottom: 3px solid #ccc; /* Linha abaixo do título */
+  display: inline-block; /* Faz o título ocupar o espaço necessário */
+  padding-bottom: 2px; /* Espaço entre o texto e a linha */
 }

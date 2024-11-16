@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tela de Login</title>
+    <link rel="stylesheet" href="style_login.css" />
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <!-- Link para o arquivo CSS -->
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">Unifeso-Agenda Facil</div>
+      <a href="pagina_principal.html" class="main-btn">Principal</a>
+    </div>
+    <div class="container">
+      <div class="content-container">
+        <div class="login-section">
+          <h2>Login</h2>
+          <form
+            action="login_process.php"
+            method="POST"
+            onsubmit="login_user(event)"
+          >
+            <div class="form-group">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="E-mail"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Senha"
+                required
+              />
+            </div>
+            <button type="submit" class="btn-rounded">Entrar</button>
+          </form>
+          <button
+            onclick="window.location.href='cadastro.html'"
+            class="btn-rounded"
+          >
+            Crie sua conta
+          </button>
+        </div>
+        <div class="info-section">
+          <div class="content">
+            <h3>Bem-vindo</h3>
+            <p>
+              O projeto Agenda Fácil tem como objetivo ajudar você a lidar com a
+              complexidade do imposto de renda. Vamos mostrar que não é um bicho
+              de sete cabeças!
+            </p>
+            <p>
+              Faça login com seu e-mail e senha para que possamos iniciar seu
+              atendimento.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function login_user(event) {
+        event.preventDefault();
+
+        const email = document.getElementById("email").value;
+        const senha = document.getElementById("password").value;
+
+        if (email === "jhonathanpegoral123@gmail.com" && senha === "123") {
+          alert("Login efetuado");
+          location.href = "agendamento.html"; // Redirecionar para a página de agendamento
+        } else {
+          alert("Email ou senha inválidos.");
+        }
+      }
+    </script>
+  </body>
+</html>

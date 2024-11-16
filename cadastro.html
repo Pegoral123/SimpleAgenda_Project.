@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro</title>
     <link rel="stylesheet" href="style_cadastro.css" />
+    <link rel="icon" type="image/png" href="img/favicon.png" />
     <!-- Link para o arquivo CSS -->
   </head>
   <body>
     <div class="navbar">
       <div class="logo">Unifeso-Agenda Facil</div>
-      <a href="pagina_principal.html" class="main-btn">Principal</a>
+      <a href="login.html" class="main-btn">Principal</a>
     </div>
 
     <div class="container">
@@ -32,7 +33,13 @@
           <label for="password">Senha</label>
           <input type="password" id="password" name="password" required />
         </div>
-        <button type="submit" class="btn-rounded">Cadastrar</button>
+        <button
+          type="button"
+          class="btn-rounded"
+          onclick="window.location.href='agendamento.html'"
+        >
+          Cadastrar
+        </button>
       </form>
     </div>
   </body>
