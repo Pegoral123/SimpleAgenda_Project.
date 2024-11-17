@@ -111,7 +111,7 @@ body {
 
 .info-section {
   width: 60%;
-  background-image: url("img/foto.jpg");
+  background-image: url("/img/foto.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
