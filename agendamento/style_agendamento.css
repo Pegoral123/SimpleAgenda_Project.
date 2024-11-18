@@ -44,17 +44,6 @@ body {
   font-size: 14px;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.user-info span {
-  display: block;
-  text-align: right;
-  font-size: 0.9rem;
-}
-
 .main-container {
   max-width: 900px;
   margin: 30px auto;
@@ -65,81 +54,12 @@ body {
   margin-top: 140px; /* Espaço para o navbar */
 }
 
-.form-container h1 {
-  margin-bottom: 10px;
-  color: #0a0a0a;
-}
-
-.form-container p {
-  margin-bottom: 20px;
-  font-size: 0.95rem;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-group label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.form-group select,
-.form-group input {
-  width: 100%;
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.alert {
-  background-color: #ffeb3b;
-  padding: 10px;
-  margin: 15px 0;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  color: #333;
-}
-
-.links a {
-  font-size: 0.9rem;
-  color: #080707;
-  text-decoration: none;
-}
-
-.links a:hover {
-  text-decoration: underline;
-}
-
-.form-actions {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.btn-rounded {
-  background-color: #90ee90;
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  text-align: center;
-  transition: background-color 0.3s ease;
-}
-
-.btn-rounded:hover {
-  background-color: #76c776;
-}
-
 .consulta-tabela {
-  margin-top: 30px;
+  margin-top: 15px;
   background-color: #fff;
   padding: 15px;
   border-radius: 8px;
+  text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -161,8 +81,8 @@ table th {
   font-weight: bold;
 }
 
-h1 {
-  font-size: 2.5rem; /* Tamanho do texto */
+h2 {
+  font-size: 2rem; /* Tamanho do texto */
   font-weight: bold; /* Negrito */
   text-align: center; /* Centraliza o texto */
   color: #050404; /* Cor (tom de vermelho) */
@@ -170,6 +90,189 @@ h1 {
   text-transform: uppercase; /* Texto em letras maiúsculas */
   letter-spacing: 2px; /* Espaçamento entre as letras */
   border-bottom: 3px solid #ccc; /* Linha abaixo do título */
-  display: inline-block; /* Faz o título ocupar o espaço necessário */
   padding-bottom: 2px; /* Espaço entre o texto e a linha */
+}
+
+main {
+  padding: 20px;
+}
+
+.schedule {
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 10px;
+}
+
+.schedule-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.schedule-btn:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+.schedule-btn:hover:not(:disabled) {
+  background-color: #218838;
+}
+
+.status {
+  font-weight: bold;
+}
+
+.status.indisponivel {
+  color: red;
+}
+
+.status.disponivel {
+  color: green;
+}
+
+/* Estilo geral da seção de agendamentos */
+#agendamentos {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título da seção */
+#agendamentos h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+/* Lista de agendamentos */
+#agendamentos ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#agendamentos ul li {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Quando passar o mouse por cima de um agendamento */
+#agendamentos ul li:hover {
+  background-color: #f1f1f1;
+}
+
+/* Texto dos horários */
+#agendamentos ul li span {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Botão de cancelar (exemplo) */
+#agendamentos ul li button {
+  padding: 5px 10px;
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#agendamentos ul li button:hover {
+  background-color: #ff1a1a;
+}
+
+/* Estilo do rodapé */
+.footer {
+  background-color: #222; /* Cor de fundo */
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Estilo do logo */
+.footer .logo img {
+  max-width: 120px;
+  margin-bottom: 15px;
+}
+
+/* Estilo da lista de redes sociais */
+.footer .social-media .list-inline {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Estilo dos itens da lista */
+.footer .social-media .list-inline li {
+  display: inline;
+}
+
+/* Estilo dos links das redes sociais */
+.footer .social-media .list-inline li a {
+  color: #00bcd4; /* Cor dos ícones */
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer .social-media .list-inline li a:hover {
+  color: #008c9e; /* Cor no hover */
+}
+
+/* Ajusta os ícones para centralizá-los */
+.footer .social-media .list-inline li i {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.rodape {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Empurra o rodapé para baixo */
+  min-height: 45vh; /* Faz a seção ocupar toda a altura da tela */
+  margin: 0; /* Remove margens padrão */
+}
+
+.footer {
+  background-color: #222; /* Cor de fundo */
+  color: #fff; /* Cor do texto */
+  text-align: center;
+  padding: 20px 0;
 }

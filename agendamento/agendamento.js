@@ -55,3 +55,34 @@ function marcarConsulta() {
   // Limpar o formulário
   document.getElementById("agendamentoForm").reset();
 }
+
+//////
+
+function agendarAtendimento(button, data, horario) {
+  // Alterar o status do horário na tabela
+  const statusCell = button.parentElement.previousElementSibling;
+  if (statusCell.classList.contains("indisponivel")) {
+    alert("Este horário já está agendado!");
+    return;
+  }
+
+  statusCell.textContent = "Indisponível";
+  statusCell.classList.remove("disponivel");
+  statusCell.classList.add("indisponivel");
+
+  // Desativar o botão
+  button.disabled = true;
+
+  // Exibir agendamento na lista de agendamentos
+  const agendamentosSection = document.getElementById("agendamentos");
+  const appointmentsList = document.getElementById("appointmentsList");
+
+  const listItem = document.createElement("li");
+  listItem.textContent = `Horário agendado: ${data} as ${horario}`;
+  appointmentsList.appendChild(listItem);
+
+  agendamentosSection.style.display = "block";
+
+  // Mensagem de sucesso
+  alert(`Agendamento realizado para ${horario}!`);
+}
