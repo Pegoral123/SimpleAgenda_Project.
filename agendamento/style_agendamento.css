@@ -51,7 +51,7 @@ body {
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-top: 140px; /* Espaço para o navbar */
+  margin-top: 30px; /* Espaço para o navbar */
 }
 
 .consulta-tabela {
@@ -225,8 +225,9 @@ table td {
 
 /* Estilo do logo */
 .footer .logo img {
-  max-width: 120px;
+  max-width: 180px;
   margin-bottom: 15px;
+  text-align: center;
 }
 
 /* Estilo da lista de redes sociais */
@@ -246,7 +247,7 @@ table td {
 
 /* Estilo dos links das redes sociais */
 .footer .social-media .list-inline li a {
-  color: #00bcd4; /* Cor dos ícones */
+  color: #f5f7f5; /* Cor dos ícones */
   font-size: 24px;
   text-decoration: none;
   transition: color 0.3s;
@@ -263,11 +264,16 @@ table td {
 }
 
 .rodape {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end; /* Empurra o rodapé para baixo */
-  min-height: 45vh; /* Faz a seção ocupar toda a altura da tela */
-  margin: 0; /* Remove margens padrão */
+  position: flex; /* Mantém o rodapé fixado */
+  bottom: 0; /* Alinha ao final da janela */
+  left: 0;
+  width: 100%; /* Ocupa 100% da largura */
+  background-color: #222; /* Cor de fundo */
+  color: #fff; /* Cor do texto */
+  text-align: center;
+  padding: 20px 0;
+  z-index: 10; /* Garante que ficará acima de outros elementos */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
 }
 
 .footer {
@@ -275,4 +281,10 @@ table td {
   color: #fff; /* Cor do texto */
   text-align: center;
   padding: 20px 0;
+}
+
+.foto {
+  text-align: center;
+  padding: 4px;
+  height: 100px;
 }
