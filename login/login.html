@@ -5,14 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
     <link rel="stylesheet" href="style_login.css" />
+    <link rel="stylesheet" href="/nav.css" />
+    <link rel="stylesheet" href="/rodape.css" />
     <link rel="icon" type="image/png" href="img/favicon.png" />
-    <!-- Link para o arquivo CSS -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <div class="navbar">
-      <div class="logo">Unifeso-Agenda Facil</div>
-      <a href="pagina_principal.html" class="main-btn">Principal</a>
+  <!-- nav -->
+  <header>
+    <div class="menu">
+      <div class="hamburguer" id="hamburguer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="logo">
+        <h1>AgendaFácil NAF</h1>
+      </div>
     </div>
+  </header>
+
+  <nav class="nav" id="nav">
+    <ul>
+      <h1 class="visually-hidden"></h1>
+
+      <div
+        class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark"
+        style="width: 300px"
+      >
+        <a
+          href="/"
+          class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none containerLogoUnifeso"
+        >
+          <img src="/img/UNIFESO.png" width="150" height="80" />
+        </a>
+        <hr />
+        <div id="opcoesDisponiveisParaUsuarios">
+          <ul class="nav nav-pills flex-column mb-auto"></ul>
+        </div>
+        <hr />
+        <div class="dropdown">
+          <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+            <li><a class="dropdown-item" href="/index.html">Principal</a></li>
+  
+            <li><hr class="dropdown-divider" /></li>
+           
+          </ul>
+        </div>
+      </div>
+
+      <div class="b-example-divider b-example-vr"></div>
+      <div></div>
+      <h1 class="text-align center" style="color: white"></h1>
+    </ul>
+  </nav>
+  <!-- nav -->
     <div class="container">
       <div class="content-container">
         <div class="login-section">
@@ -65,20 +115,37 @@
         </div>
       </div>
     </div>
-    <script>
-      function login_user(event) {
-        event.preventDefault();
 
-        const email = document.getElementById("email").value;
-        const senha = document.getElementById("password").value;
-
-        if (email === "jhonathanpegoral123@gmail.com" && senha === "123") {
-          alert("Login efetuado");
-          location.href = "/agendamento/agendamento.html"; // Redirecionar para a página de agendamento
-        } else {
-          alert("Email ou senha inválidos.");
-        }
-      }
-    </script>
+     <!-- rodape -->
+     <section class="rodape">
+      <footer class="footer">
+        <div class="logo">
+          <img src="/img/UNIFESO-BRANCO.png" alt="Unifeso Logo" />
+        </div>
+        <div class="social-media">
+          <ul class="list-inline">
+            <li>
+              <a href="https://www.facebook.com/feso.unifeso" target="_blank"
+                ><i class="bi bi-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/feso.unifeso/" target="_blank">
+                <i class="bi bi-instagram"></i></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/channel/UCqJHUIHPOB0SkdgiVExdSjw/featured"
+                target="_blank"
+                ><i class="bi bi-youtube"></i>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </section>
+    <!-- rodape -->
   </body>
+  <script src="/nav.js"></script>
+  <script src="login.js"></script>
 </html>

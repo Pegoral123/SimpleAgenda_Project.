@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cadastro</title>
-    <!-- Link para o CSS -->
-    <link rel="stylesheet" href="style_cadastro.css" />
+    <title>Comentários - AgendaFácil</title>
+    <link rel="stylesheet" href="style_feedback.css" />
     <link rel="stylesheet" href="/nav.css" />
     <link rel="icon" type="image/png" href="img/favicon.png" />
     <link rel="stylesheet" href="/rodape.css" />
@@ -13,7 +12,6 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
       rel="stylesheet"
     />
-
   </head>
   <body>
     <!-- nav -->
@@ -52,10 +50,21 @@
           <div class="dropdown">
             <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
               <li><a class="dropdown-item" href="/index.html">Principal</a></li>
-              <li><a class="dropdown-item" href="/feedback/feedback.html">Comentário</a></li>
+              <li>
+                <a class="dropdown-item" href="/feedback/feedback.html"
+                  >Comentário</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="/agendamento/agendamento.html"
+                  >Agendar Consulta</a
+                >
+              </li>
               <li><a class="dropdown-item" href="#">Perfil ####</a></li>
               <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item" href="/login/login.html">Sair</a></li>
+              <li>
+                <a class="dropdown-item" href="/login/login.html">Sair</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -66,42 +75,55 @@
       </ul>
     </nav>
     <!-- nav -->
+    <div class="feedback-section">
+      <!-- Título -->
+      <h1>
+        Agradecemos pelo seu feedback! Ele é muito importante e nos ajuda a
+        melhorar.
+      </h1>
 
-    <!-- cadastro-->
-    <div class="main-container">
-      <section class="schedule">
-        <h2>Cadastro</h2>
+      <!-- Corpo com texto explicativo -->
+      <div class="feedback-container">
+        <div class="feedback-text">
+          <p>
+            Sua opinião é fundamental para o sucesso do projeto AgendaFácil NAF.
+            Estamos comprometidos em proporcionar uma experiência cada vez
+            melhor para todos os nossos usuários. Deixe suas sugestões, críticas
+            ou elogios; estamos sempre ouvindo você. Cada comentário nos ajuda a
+            crescer e oferecer um serviço de maior qualidade à nossa comunidade.
+            Obrigado por contribuir com o nosso desenvolvimento!
+          </p>
+        </div>
 
-        <form action="cadastro_process.php" method="POST">
-          <div class="form-group">
-            <label for="fullname">Nome Completo</label>
-            <input type="text" id="fullname" name="fullname" required />
+        <!-- Exemplo de comentários -->
+        <div class="feedback-display">
+          <h2>Comentários Recentes:</h2>
+          <div class="comment-box">
+            <strong>Usuário1:</strong> Excelente sistema! Me ajudou muito com o
+            agendamento.
           </div>
-          <div class="form-group">
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" required />
+          <div class="comment-box">
+            <strong>Usuário2:</strong> Seria ótimo ter um horário disponível aos
+            sábados.
           </div>
-          <div class="form-group">
-            <label for="telefone">Telefone ou Celular</label>
-            <input type="tel" id="telefone" name="telefone" required />
+          <div class="comment-box">
+            <strong>Usuário3:</strong> A interface é intuitiva e fácil de usar.
+            Parabéns!
           </div>
-          <div class="form-group">
-            <label for="password">Senha</label>
-            <input type="password" id="password" name="password" required />
+
+          <!-- Campo para novo comentário -->
+          <div class="comment-form">
+            <h3>Deixe seu Comentário:</h3>
+            <textarea
+              id="userComment"
+              placeholder="Escreva seu comentário aqui..."
+            ></textarea>
+            <button>Enviar Comentário</button>
           </div>
-          <button
-            type="button"
-            class="btn-rounded"
-            onclick="window.location.href='/agedamento/agendamento.html'"
-          >
-            Cadastrar
-          </button>
-        </form>
-      </section>
+        </div>
+      </div>
     </div>
-    <!-- cadastro-->
-
- <!-- rodape -->
+    <!-- Rodapé -->
     <section class="rodape">
       <footer class="footer">
         <div class="logo">
@@ -110,26 +132,28 @@
         <div class="social-media">
           <ul class="list-inline">
             <li>
-              <a href="https://www.facebook.com/feso.unifeso" target="_blank"
-                ><i class="bi bi-facebook"></i
-              ></a>
+              <a href="https://www.facebook.com/feso.unifeso" target="_blank">
+                <i class="bi bi-facebook"></i>
+              </a>
             </li>
             <li>
               <a href="https://www.instagram.com/feso.unifeso/" target="_blank">
-                <i class="bi bi-instagram"></i></a
-              >
+                <i class="bi bi-instagram"></i>
+              </a>
             </li>
             <li>
               <a
                 href="https://www.youtube.com/channel/UCqJHUIHPOB0SkdgiVExdSjw/featured"
                 target="_blank"
-                ><i class="bi bi-youtube"></i>
+              >
+                <i class="bi bi-youtube"></i>
+              </a>
             </li>
           </ul>
         </div>
       </footer>
     </section>
-     <!-- rodape -->
+
+    <script src="/nav.js"></script>
   </body>
-  <script src="/nav.js"></script>
 </html>

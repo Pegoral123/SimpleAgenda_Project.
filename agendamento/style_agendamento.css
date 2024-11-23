@@ -8,43 +8,12 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
-}
-
-.navbar {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 20px;
-  background-color: #333;
-  color: #fff;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-}
-
-.navbar .logo {
-  font-size: 20px;
-  font-weight: bold;
-  color: #fff;
-}
-
-.navbar .main-btn {
-  padding: 8px 15px;
-  background-color: #4caf50;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 14px;
+  background-color: #f0f0f0;
+  color: #222;
 }
 
 .main-container {
+  flex: 1;
   max-width: 900px;
   margin: 30px auto;
   padding: 20px;
@@ -210,81 +179,4 @@ table td {
 
 #agendamentos ul li button:hover {
   background-color: #ff1a1a;
-}
-
-/* Estilo do rodapé */
-.footer {
-  background-color: #222; /* Cor de fundo */
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
-
-/* Estilo do logo */
-.footer .logo img {
-  max-width: 180px;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-/* Estilo da lista de redes sociais */
-.footer .social-media .list-inline {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-/* Estilo dos itens da lista */
-.footer .social-media .list-inline li {
-  display: inline;
-}
-
-/* Estilo dos links das redes sociais */
-.footer .social-media .list-inline li a {
-  color: #f5f7f5; /* Cor dos ícones */
-  font-size: 24px;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.footer .social-media .list-inline li a:hover {
-  color: #008c9e; /* Cor no hover */
-}
-
-/* Ajusta os ícones para centralizá-los */
-.footer .social-media .list-inline li i {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-}
-
-.rodape {
-  position: flex; /* Mantém o rodapé fixado */
-  bottom: 0; /* Alinha ao final da janela */
-  left: 0;
-  width: 100%; /* Ocupa 100% da largura */
-  background-color: #222; /* Cor de fundo */
-  color: #fff; /* Cor do texto */
-  text-align: center;
-  padding: 20px 0;
-  z-index: 10; /* Garante que ficará acima de outros elementos */
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
-}
-
-.footer {
-  background-color: #222; /* Cor de fundo */
-  color: #fff; /* Cor do texto */
-  text-align: center;
-  padding: 20px 0;
-}
-
-.foto {
-  text-align: center;
-  padding: 4px;
-  height: 100px;
 }

@@ -1,0 +1,60 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.rodape {
+  margin-top: auto; /* Mantém o rodapé no final */
+  width: 100%;
+  background-color: #333; /* Cor de fundo */
+  color: #fff; /* Cor do texto */
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+}
+
+.footer .logo img {
+  max-width: 180px;
+  margin-bottom: 15px;
+}
+
+/* Estilo da lista de redes sociais */
+.footer .social-media .list-inline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer .social-media .list-inline li {
+  display: inline;
+}
+
+/* Estilo dos links das redes sociais */
+.footer .social-media .list-inline li a {
+  color: #f5f7f5; /* Cor dos ícones */
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer .social-media .list-inline li a:hover {
+  color: #008c9e; /* Cor no hover */
+}
+
+.footer .social-media .list-inline li i {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.foto {
+  text-align: center;
+  padding: 4px;
+  height: 100px;
+}
