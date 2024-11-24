@@ -79,4 +79,22 @@ export function getHorariosMarcadosPorUsuario(pkUsuario){
     return  horariosMarcadosPeloUsuario;
     
 }
+export function deletarHorarioBaseadoEmPk(pkHorario){
+    //Simula comunicação com backend
+    var horarioExiste = false
+    var horariosExistentesSemOHorarioApagado = [];
+    var horariosExistentes  = JSON.parse(localStorage.getItem("horariosDisponiveis"))
+    var horariosMarcadosPeloUsuario = []
+    horariosExistentes.forEach(element => {
+        
+       if(element["pk"] !=pkHorario  ){
+            horariosExistentesSemOHorarioApagado.push(element)
+
+       }
+    });
+    localStorage.setItem("horariosDisponiveis",JSON.stringify(horariosExistentesSemOHorarioApagado));
+    window.location.replace("./home_adm.html");
+    
+}
+
 

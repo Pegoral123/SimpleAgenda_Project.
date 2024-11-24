@@ -225,7 +225,7 @@
        var chavePrimaria = data.concat(hora)
        tdElementBotao.innerHTML = `<button class="btn edit" onclick="admMarcarHorarioAgendadoComoConcluido('${chavePrimaria}')">Concluir atendimento</button>`
        var tdElementBotaoDeletar = document.createElement("td")
-       tdElementBotaoDeletar.innerHTML = `<button class="btn edit" style="background-color:red" onclick="admMarcarHorarioAgendadoComoConcluido('${chavePrimaria}')">Deletar</button>`
+       tdElementBotaoDeletar.innerHTML = `<button class="btn edit" style="background-color:red" onclick="deletarHorarioBaseadoEmPk('${chavePrimaria}')">Deletar</button>`
       
        tr.appendChild(tdElementContador)
        tr.appendChild(tdElementNomeCompleto)
@@ -244,5 +244,6 @@
   }
   
   window.admMarcarHorarioAgendadoComoConcluido = horariosModule.admMarcarHorarioAgendadoComoConcluido
+  window.deletarHorarioBaseadoEmPk = horariosModule.deletarHorarioBaseadoEmPk
 </script>
 </html>
