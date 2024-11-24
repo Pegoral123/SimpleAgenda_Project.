@@ -72,31 +72,33 @@
       <section class="schedule">
         <h2>Cadastro</h2>
 
-        <form action="cadastro_process.php" method="POST">
-          <div class="form-group">
-            <label for="fullname">Nome Completo</label>
-            <input type="text" id="fullname" name="fullname" required />
-          </div>
-          <div class="form-group">
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-          <div class="form-group">
-            <label for="telefone">Telefone ou Celular</label>
-            <input type="tel" id="telefone" name="telefone" required />
-          </div>
-          <div class="form-group">
-            <label for="password">Senha</label>
-            <input type="password" id="password" name="password" required />
-          </div>
-          <button
-            type="button"
-            class="btn-rounded"
-            onclick="window.location.href='/agedamento/agendamento.html'"
-          >
-            Cadastrar
-          </button>
-        </form>
+       
+      <form onsubmit="SalvaNovoUsuario(event)">
+        <div class="form-group" >
+          <label for="fullname" >Nome Completo</label>
+          <input type="text" id="fullname" name="fullname" required />
+        </div>
+        <div class="form-group">
+          <label for="email" >E-mail</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="telefone">Telefone ou Celular</label>
+          <input type="text" id="campoTelefone" placeholder="(XX) XXXXX-XXXX" name="telefone" onblur="validarTelefone()" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Senha</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <button
+          type="submit"
+          class="btn-rounded"
+          style="background-color: #3CB371"
+         
+        >
+          Cadastrar
+        </button>
+      </form>
       </section>
     </div>
     <!-- cadastro-->
@@ -130,6 +132,49 @@
       </footer>
     </section>
      <!-- rodape -->
+      
+    <script type="module">
+      import * as UserModule from "../js/User.js";
+      function SalvaNovoUsuario(event){
+        event.preventDefault();
+        var telefoneValidado = validarTelefone()
+        if(telefoneValidado==true){
+          
+          var nomeCompleto = document.getElementById("fullname").value
+          var email = document.getElementById("email").value
+          var telefone = document.getElementById("campoTelefone").value
+          var senha = document.getElementById("password").value
+
+
+          UserModule.SalvaNovoUsuarioEmJson(nomeCompleto,email,senha,telefone);
+          window.location.href = "../login/login.html";
+        }
+
+      }
+
+    
+    
+    window.SalvaNovoUsuario = SalvaNovoUsuario;
+    </script>
+      <script src="/nav.js"></script>
+<script>
+        function validarTelefone() {
+            var campoTelefone = document.getElementById("campoTelefone");
+            var telefone = campoTelefone.value.trim();  // Retira espaços extras
+
+            var regexTelefone = /^\(\d{2}\) \d{5}-\d{4}$/;
+
+            if (!regexTelefone.test(telefone)) {
+                alert("Por favor, digite um número de telefone válido no formato: (XX) XXXXX-XXXX.");
+
+                return false;
+            } else {
+
+                return true
+              
+            }
+        }
+</script>
   </body>
-  <script src="/nav.js"></script>
+
 </html>

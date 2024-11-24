@@ -68,8 +68,6 @@
         <div class="login-section">
           <h2>Login</h2>
           <form
-            action="login_process.php"
-            method="POST"
             onsubmit="login_user(event)"
           >
             <div class="form-group">
@@ -92,8 +90,10 @@
             </div>
             <button type="submit" class="btn-rounded">Entrar</button>
           </form>
+          
           <button
-            onclick="window.location.href='cadastro.html'"
+            onclick="window.location.href='../cadastro/cadastro.html'"
+            
             class="btn-rounded"
           >
             Crie sua conta
@@ -145,7 +145,45 @@
       </footer>
     </section>
     <!-- rodape -->
-  </body>
+ 
   <script src="/nav.js"></script>
   <script src="login.js"></script>
+<script type="module">
+import * as UserModule from "../js/User.js";
+
+var CredenciaisCorretas = false;
+  async function login_user(event) {
+    event.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const senha = document.getElementById("password").value;
+    var UserExist =  UserModule.VerificarSeUsuarioExiste(email)
+    if(UserExist==true){
+      var CredenciaisCorretas = UserModule.VerificarSeSenhaEstaCorreta(email,senha)
+      if (CredenciaisCorretas==true) {
+        console.log("teste")
+        if(email=="admin@unifeso.com.br"){
+          console.log("error")
+          window.location.replace("../usuarioLogado/adm/home_adm.html");
+          localStorage.setItem("current_user_session",email)
+        }
+        else{
+
+          window.location.replace("../usuarioLogado/comum/agendamento.html");
+          localStorage.setItem("current_user_session",email)
+
+        }
+        localStorage.setItem("current_user_session",email)
+
+          
+        } 
+      else {
+        console.log("error")
+      }
+    }
+
+    }
+  window.login_user = login_user
+  </script>
+   </body>
 </html>
