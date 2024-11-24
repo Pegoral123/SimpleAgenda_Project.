@@ -167,13 +167,20 @@
     var horaDisponivel = document.getElementById("horaDisponivel").value
     var data = new Date(dataDisponivel)
     var dataDia =""
+    var dataMes =""
     if(data.getDate()<10){
       dataDia = `0${data.getDate()}`
       
     }else{
       dataDia = data.getDate()
     }
-    data = dataDia+"/"+(data.getMonth()+1)+"/"+data.getFullYear() 
+    if(data.getMonth()<10){
+      dataMes = `0${data.getMonth()+1}`
+      
+    }else{
+      dataMes = data.getMonth()+1
+    }
+    data = dataDia+"/"+(dataMes)+"/"+data.getFullYear() 
     var chavePrimaria = data.concat(horaDisponivel)
     var horariosDisponiveis = localStorage.getItem("horariosDisponiveis")
     var jaExisteEsseHorario = horariosModule.verificarSeHorarioJaExiste(chavePrimaria)
