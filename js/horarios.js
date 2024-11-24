@@ -58,9 +58,11 @@ export function admMarcarHorarioAgendadoComoConcluido(chavePrimaria){
 
         }
     });
-    console.log(horariosExistentes)
+
     localStorage.setItem("horariosDisponiveis",JSON.stringify(horariosExistentes));
+    alert("Concluido com sucesso!")
     window.location.replace("./home_adm.html");
+    
     
 }
 export function getHorariosMarcadosPorUsuario(pkUsuario){
@@ -93,7 +95,9 @@ export function deletarHorarioBaseadoEmPk(pkHorario){
        }
     });
     localStorage.setItem("horariosDisponiveis",JSON.stringify(horariosExistentesSemOHorarioApagado));
+    alert("Deletado com sucesso!")
     window.location.replace("./home_adm.html");
+    
     
 }
 

@@ -43,7 +43,7 @@
           href="/"
           class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none containerLogoUnifeso"
         >
-          <img src="/img/UNIFESO.png" width="150" height="120" />
+          <img src="/img/UNIFESO.png" width="150" height="70" />
         </a>
         <hr />
         <div id="opcoesDisponiveisParaUsuarios">
@@ -223,8 +223,15 @@
        var horaComAspas =`'${hora}'`
        var tdElementBotao = document.createElement("td")
        var chavePrimaria = data.concat(hora)
-       tdElementBotao.innerHTML = `<button class="btn edit" onclick="admMarcarHorarioAgendadoComoConcluido('${chavePrimaria}')">Concluir atendimento</button>`
-       var tdElementBotaoDeletar = document.createElement("td")
+       if(element["statusAdm"]!="Agendado"){
+        tdElementBotao.innerHTML = `<button class="btn edit" disabled style="background-color:gray" onclick="admMarcarHorarioAgendadoComoConcluido('${chavePrimaria}')">Concluir atendimento</button>`
+        var tdElementBotaoDeletar = document.createElement("td")
+       }else{
+        tdElementBotao.innerHTML = `<button class="btn edit" onclick="admMarcarHorarioAgendadoComoConcluido('${chavePrimaria}')">Concluir atendimento</button>`
+        var tdElementBotaoDeletar = document.createElement("td")
+        
+       }
+       
        tdElementBotaoDeletar.innerHTML = `<button class="btn edit" style="background-color:red" onclick="deletarHorarioBaseadoEmPk('${chavePrimaria}')">Deletar</button>`
       
        tr.appendChild(tdElementContador)
