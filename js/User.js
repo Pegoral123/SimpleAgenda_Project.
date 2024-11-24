@@ -25,7 +25,7 @@ export function SalvaNovoUsuarioEmJson(NomeUsuario, email, senha,telefone){
     var Users = localStorage.getItem("users")
     
     var usuarios  = JSON.parse(Users)
-    console.log(usuarios);
+
 }
 export function GetJsonArquivosDeUsuarios(){
     // Usando fetch para ler um arquivo JSON
