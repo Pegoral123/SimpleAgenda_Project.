@@ -46,7 +46,11 @@ Para executar este MVP em sua máquina local, siga os passos abaixo:
      ```bash
      cd agenda_facil
      ```
-   - Abra o arquivo `index.html` no seu navegador para visualizar a aplicação.
+   - Realize a instalação do VS-CODE
+   - No VS-CODE, instale a extensão Live Server
+   - Após instalar a extensão, clique com o botão direito no arquivo `index.html` no seu VsCode
+   - Escolha a opção Open With Live Server
+
 
 ### Problemas Enfrentados
 - Criar um front-end que não tenha conexão com o back-end.

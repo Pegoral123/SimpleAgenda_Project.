@@ -87,7 +87,8 @@
                         <th>Data</th>
                         <th>Horário</th>
                         <th>Status</th>
-                        <th>Ações</th>
+                        <th>Ação 1</th>
+                        <th>Ação 2</th>
                     </tr>
                 </thead>
                 <tbody id="tabelaComHorarios">
@@ -223,6 +224,8 @@
        var tdElementBotao = document.createElement("td")
        var chavePrimaria = data.concat(hora)
        tdElementBotao.innerHTML = `<button class="btn edit" onclick="admMarcarHorarioAgendadoComoConcluido('${chavePrimaria}')">Concluir atendimento</button>`
+       var tdElementBotaoDeletar = document.createElement("td")
+       tdElementBotaoDeletar.innerHTML = `<button class="btn edit" style="background-color:red" onclick="admMarcarHorarioAgendadoComoConcluido('${chavePrimaria}')">Deletar</button>`
       
        tr.appendChild(tdElementContador)
        tr.appendChild(tdElementNomeCompleto)
@@ -231,6 +234,7 @@
        tr.appendChild(tdElementHora)
        tr.appendChild(tdElementDisponivel)
        tr.appendChild(tdElementBotao)
+       tr.appendChild(tdElementBotaoDeletar)
        getTabelaComHorarios.appendChild(tr)
        contador = contador+1
        
