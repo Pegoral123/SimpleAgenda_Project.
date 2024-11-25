@@ -11,7 +11,7 @@ O projeto **Agenda Fácil** visa resolver o problema de **gestão e organizaçã
 - **HTML**: Estruturação do conteúdo do site.
 - **CSS**: Estilização da interface do usuário.
 - **Bootstrap**: Framework CSS utilizado para agilizar o design responsivo.
-- **JavaScript** *(possivelmente)*: Implementação de interatividade nas páginas.
+- **JavaScript**: Implementação de interatividade nas páginas.
 
 ## MVP Base
 
