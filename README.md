@@ -1,4 +1,4 @@
-# PROJETO_AgendaFacil
+# SimpleAgenda_Project
 
 ## Integrantes da Equipe
 - **Jhonathan da Silva Pegoral**
