@@ -5,7 +5,7 @@
 - **Carlos Henrique Cunha de Oliveira**
 
 ## Situação Problema
-O projeto **Agenda Fácil** visa resolver o problema de **gestão e organização de compromissos** pessoais e profissionais. Seu objetivo é facilitar a consulta entre alunos e professores, ajudando os usuários a fazerem a declaração do imposto de renda.
+O projeto **Simple Agenda** visa resolver o problema de **gestão e organização de compromissos** pessoais e profissionais. Seu objetivo é facilitar a consulta entre alunos e professores, ajudando os usuários a fazerem a declaração do imposto de renda.
 
 ## Tecnologias Utilizadas
 - **HTML**: Estruturação do conteúdo do site.
