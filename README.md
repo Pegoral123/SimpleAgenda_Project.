@@ -29,7 +29,7 @@ O público-alvo principal inclui:
 - Perda de tempo ao tentar acompanhar manualmente os horários e disponibilidade dos profissionais de contabilidade.
 
 ### Objetivo / Agregação de Valor do Produto
-O **Agenda Fácil** busca fornecer uma solução intuitiva para facilitar a organização de consultas, permitindo que os usuários centralizem e visualizem seus horários de forma eficiente. Com a plataforma, espera-se otimizar o tempo dos usuários e reduzir a taxa de compromissos esquecidos ou em conflito.
+O **Simple Agenda_Project.** busca fornecer uma solução intuitiva para facilitar a organização de consultas, permitindo que os usuários centralizem e visualizem seus horários de forma eficiente. Com a plataforma, espera-se otimizar o tempo dos usuários e reduzir a taxa de compromissos esquecidos ou em conflito.
 
 ## Instruções para Executar o MVP
 Para executar este MVP em sua máquina local, siga os passos abaixo:
